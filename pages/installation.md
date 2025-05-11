@@ -1,6 +1,6 @@
 ### [Manual](../Readme.md) / Instalação
 
-# Instalação dos Componentes Necessários
+<h1 id="introduction">Instalação dos Componentes Necessários</h1>
 
 - [VS Code](#vscodeinstaller)
 - [PHP](#phpinstaller)
@@ -94,4 +94,13 @@
 ---
 
 Com tudo configurado estamos prontos para começar a [desenvolver nossos projetos](first_steps.md).
+
+
+---
+
+<div style="display: flex; align-items: center; justify-content: space-between; width: 100%; height: 35px;">
+  <div style="width: 5%; background-color: transparent;"><a href="../Readme.md"><img src="../assets/back-page.svg"></img></a></div>
+  <div style="width: 5%; background-color: transparent;"><a href="#introduction"><img src="../assets/back-directory.svg"></a></div>
+  <div style="width: 5%; background-color: transparent;"><a href="first_steps.md"><img src="../assets/next-page.svg"></img></a></div>
+</div>
     
