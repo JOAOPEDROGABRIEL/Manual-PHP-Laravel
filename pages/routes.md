@@ -65,6 +65,8 @@ O comando Route temos 2 parâmetros pre-definidos, sendo elas, uma entrada de um
 
     Route::get($uri, $callback);
 
+veja mais sobre <a href="routes/parameters.md">Rotas</a>.
+
 <div style="display: flex; align-items: center; justify-content: space-between; width: 100%; height: 35px;">
   <div style="width: 5%; background-color: transparent;"><a href="first_steps.md"><img src="../assets/back-page.svg"></img></a></div>
   <div style="width: 5%; background-color: transparent;"><a href="#introduction"><img src="../assets/back-directory.svg"></a></div>
