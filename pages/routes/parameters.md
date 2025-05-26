@@ -70,8 +70,72 @@ Receber parâmetros em rotas no Laravel permite que você crie URLs dinâmicas, 
 
     ```...->where('variável_relacionada', 'expressão_e-ou_intervalo_de_valores');```
 
+- A partir disto, quaisquer referências andrógenas aos pré-estabelecidos, serão reconhecidas pelo controle do laravel como páginas não encontradas, e não como erros de código, sendo tratadas como tal, até que seja suprida com dados reais no sistema.
+
+
+- Já em casos onde há a necessidade de que seja uma variável onde não se pode entrar números, no caso de entada de nomes, e nomenclaturas, textos brutos, etc., utilizando o mesmo ```where```, entretanto com os parâmetros:
+
+        Route::get(
+            '/contato/{nome}/{categoria_id}', 
+            function(
+                string $nome, 
+                int $categoria_id) {
+            echo "Estamos Aqui $nome! - Categoria: $categoria_id";
+        })->where('categoria_id', '[0-9]+')->where('nome', '[A-Za-z]+');
+
+Ressaltando o ```where```:
+
+    ...->where('nome', '[A-Za-z]+');
+
+
+---
+
+
+Para os próximos momentos é recomendado que seja feita uma navegação básica entre as páginas utilizando o seguinte código, nas views do projeto:
+
+    ...
+        <ul>
+            <li>
+                <a href="/">Principal</a>
+            </li>
+
+            <li>
+                <a href="/sobrenos">Sobre Nós</a>
+            </li>
+            
+            <li>
+                <a href="/contato">Contato</a>
+            </li>
+
+            ...
+
+            <li>
+                <a href="/routex">RotaX</a>
+            </li
+        </ul>
+
+---
+
+- Em um prompt no mesmo diretório do servidor do laravel, com o servidor sendo executado através do comando ```php artisan serve``` em outro prompt, utilizando o comando:
+
+    ```php artisan routes:list```
+
+- É possível visualizar no terminal uma lista onde são retornados as relações de rotas que estão configuradas no servidor laravel.
+
+---
+
+### Listagem Dinâmica de Rotas usando o Artisan:
+
+- Para a listagem de rotas usando o artisan podemos utilizar o seguinte comando no terminal do diretório do servidor, com ele funcionando:
+
+        php artisan route:list
+
+    - Com isso o servidor vai retornar uma lista contento todas as rotas configuradas:
+
+    <img src="../../assets/routes_list.png">
+
 <div style="display: flex; align-items: center; justify-content: space-between; width: 100%; height: 35px;">
   <div style="width: 5%; background-color: transparent;"><a href="../views.md"><img src="../../assets/back-page.svg"></img></a></div>
   <div style="width: 5%; background-color: transparent;"><a href="../routes.md"><img src="../../assets/back-directory.svg"></a></div>
-  <div style="width: 5%; background-color: transparent;"><a href="#"><img src="../../assets/next-page.svg"></img></a></div>
+  <div style="width: 5%; background-color: transparent;"><a href="grouping.md"><img src="../../assets/next-page.svg"></img></a></div>
 </div>
